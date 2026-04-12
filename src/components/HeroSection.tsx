@@ -33,7 +33,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden px-4 pb-28 pt-24 sm:px-6 md:px-[8%] md:pb-[clamp(140px,16vw,200px)] md:pt-[clamp(100px,12vw,160px)]">
+    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden px-4 pb-28 pt-20 sm:px-6 md:px-12 md:pb-[clamp(140px,16vw,200px)] md:pt-[clamp(100px,12vw,160px)]">
       {/* Floating thread particles SVG background */}
       <svg
         className="pointer-events-none absolute inset-0 w-full h-full opacity-20"
@@ -83,7 +83,7 @@ export function HeroSection() {
 
       {/* Brand identity block: above background, below hero copy */}
       <motion.div
-        className="absolute left-4 top-4 z-20 sm:left-6 sm:top-6 md:left-[6%] md:top-[6%]"
+        className="relative z-20 mb-8 w-fit md:absolute md:left-[6%] md:top-[6%] md:mb-0"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
@@ -97,29 +97,29 @@ export function HeroSection() {
           <img
             src="/photo/logo.webp"
             alt="Sewzy Bee logo"
-            className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain logo-glow"
+            className="h-auto w-[80%] max-w-xs object-contain logo-glow sm:w-14 md:w-[80%] md:max-w-md"
             onError={(event) => {
               event.currentTarget.onerror = null;
               event.currentTarget.src = "/photo/logo.png";
             }}
           />
-          <span className="font-display text-[clamp(20px,2.8vw,34px)] leading-none font-semibold tracking-[0.045em] text-cream/90 transition duration-300 group-hover:text-gold">
+          <span className="font-display text-2xl font-semibold leading-tight tracking-[0.045em] text-cream/90 transition duration-300 group-hover:text-gold sm:text-3xl md:text-[clamp(20px,2.8vw,34px)]">
             Sewzy Bee
           </span>
         </a>
       </motion.div>
 
       {/* Main content container with responsive asymmetrical layout */}
-      <div className="relative z-30 grid min-h-[calc(100vh-220px)] items-center gap-8 pt-14 md:min-h-[calc(100vh-320px)] md:grid-cols-[1fr_1.1fr] md:gap-[clamp(24px,6vw,32px)] md:pt-0">
+      <div className="relative z-30 flex min-h-[calc(100vh-220px)] flex-col gap-10 md:min-h-[calc(100vh-320px)] md:flex-row md:items-center md:gap-[clamp(24px,6vw,32px)]">
         {/* Left text block */}
         <motion.div
-          className="space-y-[clamp(20px,4vw,24px)]"
+          className="space-y-6 md:w-1/2 md:space-y-[clamp(20px,4vw,24px)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
           {/* Main Headline - controlled two-line break with staggered reveal */}
-          <h1 className="font-display text-[clamp(34px,10vw,92px)] font-bold leading-[1.03] tracking-[-0.02em] text-cream sm:leading-[1.08]">
+          <h1 className="font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-cream sm:text-4xl md:text-6xl md:leading-[1.08]">
             {headlineLines.map((line, lineIndex) => {
               const delayOffset =
                 headlineLines.slice(0, lineIndex).join("").length + lineIndex * 2;
@@ -157,7 +157,7 @@ export function HeroSection() {
 
           {/* CTA Buttons - responsive and full-width on mobile */}
           <motion.div
-            className="flex flex-col sm:flex-row gap-[clamp(12px,2.5vw,16px)] pt-[clamp(16px,3vw,24px)]"
+            className="flex flex-col gap-3 pt-4 sm:flex-row sm:gap-[clamp(12px,2.5vw,16px)] sm:pt-[clamp(16px,3vw,24px)]"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -190,13 +190,13 @@ export function HeroSection() {
         {/* Right visual - hidden on mobile, floated with offset on desktop */}
         <motion.div
           ref={visualRef}
-          className="hidden md:block relative md:-translate-y-[40px] offset-right"
+          className="relative hidden md:block md:-translate-y-[40px] md:w-1/2 offset-right"
           variants={fadeInScale}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.4 }}
         >
-          <div className="relative h-[400px] md:h-[520px] bg-gradient-to-br from-rust/20 to-gold/10 rounded-[24px] border border-cream/20 overflow-hidden">
+          <div className="relative h-[400px] overflow-hidden rounded-[24px] border border-cream/20 bg-gradient-to-br from-rust/20 to-gold/10 md:h-[520px]">
             {/* Embroidery pattern simulation */}
             <svg
               className="absolute inset-0 w-full h-full"
