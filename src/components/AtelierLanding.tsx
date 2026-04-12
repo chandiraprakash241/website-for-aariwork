@@ -41,7 +41,7 @@ export function AtelierLanding() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-mesh text-ink">
-      <div className="pointer-events-none absolute inset-0 opacity-35 [background-image:linear-gradient(90deg,rgba(255,255,255,0.18)_1px,transparent_1px),linear-gradient(rgba(255,255,255,0.12)_1px,transparent_1px)] [background-size:24px_24px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-35 atelier-fabric-texture" />
 
       <div className="pointer-events-none absolute inset-0 opacity-75">
         <div className="absolute left-[-10%] top-[-18%] h-[34rem] w-[34rem] rounded-full bg-accent/15 blur-[100px]" />

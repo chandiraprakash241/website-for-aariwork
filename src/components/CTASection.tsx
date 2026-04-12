@@ -18,7 +18,7 @@ export function CTASection() {
         </h2>
 
         <p className="text-lg leading-relaxed text-charcoal/80 max-w-2xl mx-auto">
-          Begin a conversation with our artisans. Share your vision, and we'll craft a
+          Begin a conversation with our artisans. Share your vision, and we&apos;ll craft a
           masterpiece tailored to your moment.
         </p>
 

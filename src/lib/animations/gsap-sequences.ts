@@ -5,7 +5,6 @@
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { easing } from "./easing";
 
 gsap.registerPlugin(ScrollTrigger);
 

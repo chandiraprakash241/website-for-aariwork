@@ -48,7 +48,7 @@ export function Testimonials() {
             Words from Brides
           </h2>
           <p className="text-[clamp(16px,4vw,18px)] text-cream/70 max-w-2xl">
-            Hear from those who've trusted us with their special days.
+            Hear from those who&apos;ve trusted us with their special days.
           </p>
         </motion.div>
 
@@ -68,7 +68,7 @@ export function Testimonials() {
             >
               {/* Quote mark accent */}
               <div className="absolute -top-2 -left-2 text-[clamp(32px,8vw,64px)] font-display text-brass/20 leading-none">
-                "
+                &quot;
               </div>
 
               <div className="relative z-10 space-y-4">

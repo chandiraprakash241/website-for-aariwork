@@ -43,8 +43,6 @@ const STROKE_FADE_START = 3200;
 const STROKE_FADE_DURATION = 2200;
 const TAU = Math.PI * 2;
 
-const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
-
 const lerpPoint = (from: Point, to: Point, t: number): Point => ({
   x: from.x + (to.x - from.x) * t,
   y: from.y + (to.y - from.y) * t
@@ -604,7 +602,7 @@ export function ThreadCanvas() {
   };
 
   return (
-    <section className="relative z-30 -mt-[220px] w-full px-[12%] pb-[160px] pt-[280px] bg-[linear-gradient(180deg,rgba(74,26,31,0)_0%,rgba(245,237,224,0.82)_30%,rgba(245,237,224,1)_54%)]">
+    <section className="relative z-30 -mt-[220px] w-full px-[12%] pb-[160px] pt-[280px] thread-canvas-gradient">
       <motion.div
         className="space-y-8"
         initial={{ opacity: 0 }}
@@ -619,7 +617,7 @@ export function ThreadCanvas() {
         </div>
 
         <div
-          className="relative w-full h-[600px] rounded-[24px] overflow-hidden border border-cream/35 shadow-[0_30px_80px_rgba(42,36,32,0.35)]"
+          className="relative w-full h-[600px] rounded-[24px] overflow-hidden border border-cream/35 canvas-shadow"
           data-cursor="thread"
         >
           <canvas

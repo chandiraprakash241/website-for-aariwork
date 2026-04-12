@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import { useEffect, useRef } from "react";
 import {
   letterReveal,
   fadeInUp,
@@ -14,7 +13,6 @@ import {
 import { animateThreadPath, floatingMotion } from "@/lib/animations/gsap-sequences";
 
 export function HeroSection() {
-  const [hoveredButton, setHoveredButton] = useState<string | null>(null);
   const visualRef = useRef<HTMLDivElement>(null);
   const threadPath1 = useRef<SVGPathElement>(null);
   const threadPath2 = useRef<SVGPathElement>(null);
@@ -99,7 +97,7 @@ export function HeroSection() {
           <img
             src="/photo/logo.webp"
             alt="Sewzy Bee logo"
-            className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain opacity-85 transition duration-300 group-hover:opacity-100 group-hover:drop-shadow-[0_0_10px_rgba(240,230,200,0.45)]"
+            className="h-11 w-11 sm:h-12 sm:w-12 md:h-14 md:w-14 object-contain logo-glow"
             onError={(event) => {
               event.currentTarget.onerror = null;
               event.currentTarget.src = "/photo/logo.png";
@@ -153,7 +151,7 @@ export function HeroSection() {
             animate="visible"
             transition={{ delay: 0.8 }}
           >
-            Aari is not just embroidery—it's storytelling with thread, a conversation between artist
+            Aari is not just embroidery&mdash;it&apos;s storytelling with thread, a conversation between artist
             and fiber.
           </motion.p>
 
@@ -168,8 +166,6 @@ export function HeroSection() {
             <motion.a
               href="mailto:hello@aariwork.com?subject=Start%20My%20Blouse%20Design"
               className="btn-primary w-full sm:w-auto"
-              onMouseEnter={() => setHoveredButton("primary")}
-              onMouseLeave={() => setHoveredButton(null)}
               variants={buttonHover}
               whileHover="hover"
               whileTap="tap"
@@ -181,8 +177,6 @@ export function HeroSection() {
             <motion.a
               href="#portfolio"
               className="btn-secondary w-full sm:w-auto"
-              onMouseEnter={() => setHoveredButton("secondary")}
-              onMouseLeave={() => setHoveredButton(null)}
               variants={buttonSecondaryHover}
               whileHover="hover"
               whileTap="tap"

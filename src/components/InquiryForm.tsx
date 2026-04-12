@@ -93,7 +93,7 @@ export function InquiryForm() {
               Thank you!
             </h3>
             <p className="text-[clamp(14px,2.5vw,16px)] text-charcoal/70 mt-2">
-              We'll be in touch soon. Check your email & WhatsApp.
+              We&apos;ll be in touch soon. Check your email &amp; WhatsApp.
             </p>
           </div>
         </div>
@@ -115,7 +115,7 @@ export function InquiryForm() {
             Start Your Design
           </h2>
           <p className="text-[clamp(14px,2.5vw,16px)] text-charcoal/70">
-            Tell us about your vision. We'll work closely with you to bring it to life.
+            Tell us about your vision. We&apos;ll work closely with you to bring it to life.
           </p>
         </motion.div>
 
@@ -261,7 +261,7 @@ export function InquiryForm() {
           </motion.button>
 
           <p className="text-center text-[clamp(12px,2vw,14px)] text-charcoal/60">
-            We'll connect with you within 24 hours.
+            We&apos;ll connect with you within 24 hours.
           </p>
         </motion.form>
       </div>

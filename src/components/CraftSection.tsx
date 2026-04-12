@@ -55,10 +55,10 @@ export function CraftSection() {
                 Training spans a decade. Each stitch is meditative precision paired with intuitive artistry.
               </p>
               <p className="text-base leading-relaxed text-cream/85">
-                We collaborate only with ethical, family-run ateliers across India's embroidery heartlands.
+                We collaborate only with ethical, family-run ateliers across India&apos;s embroidery heartlands.
               </p>
               <p className="text-base leading-relaxed text-cream/85">
-                Every commission is a dialogue between tradition and the wearer's vision.
+                Every commission is a dialogue between tradition and the wearer&apos;s vision.
               </p>
             </div>
           </motion.div>

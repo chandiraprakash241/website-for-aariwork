@@ -178,7 +178,7 @@ export function SignatureField() {
           embroidery before booking your fitting.
         </p>
 
-        <div className="mt-5 overflow-hidden rounded-3xl border border-ink/12 bg-[linear-gradient(145deg,#f8f1e6_0%,#efe2cf_100%)] p-4">
+        <div className="mt-5 overflow-hidden rounded-3xl border border-ink/12 signature-field-gradient p-4">
           <svg viewBox="0 0 500 420" className="h-[290px] w-full md:h-[330px]" fill="none">
             <rect x="120" y="120" width="260" height="210" rx="46" fill={garmentFill} />
             <rect x="66" y="130" width="84" height={sleeveWidth[sleeve]} rx="22" fill={garmentFill} />

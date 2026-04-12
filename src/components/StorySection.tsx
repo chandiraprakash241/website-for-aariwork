@@ -104,7 +104,7 @@ export function StorySection() {
             Each silk tells a different story
           </h4>
           <p className="text-base leading-relaxed text-charcoal/85">
-            From raw silk's subtle texture to velvet's regal density, the choice of foundation
+            From raw silk&apos;s subtle texture to velvet&apos;s regal density, the choice of foundation
             fabric shapes how light dances across embroidery. This decision is as important as the
             stitches themselves.
           </p>
