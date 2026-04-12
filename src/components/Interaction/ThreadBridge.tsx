@@ -66,7 +66,7 @@ export function ThreadBridge() {
   return (
     <div
       ref={containerRef}
-      className="pointer-events-none absolute left-0 right-0 top-[58vh] z-20 h-[125vh] overflow-hidden"
+      className="pointer-events-none absolute left-0 right-0 top-[58vh] z-20 hidden h-[125vh] overflow-hidden md:block"
       aria-hidden="true"
     >
       <svg className="h-full w-full" viewBox="0 0 1440 1600" preserveAspectRatio="none">
