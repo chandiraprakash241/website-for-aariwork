@@ -5,10 +5,10 @@ import { hoverLift, tapPress } from "@/lib/animations/micro-interactions";
 
 export function FeaturedWorks() {
   return (
-    <section className="relative w-full py-[160px] px-[12%] bg-cream">
-      <div className="relative z-10 space-y-[120px]">
+    <section className="relative w-full bg-cream px-4 py-20 sm:px-6 md:px-[8%] md:py-32">
+      <div className="relative z-10 mx-auto max-w-7xl space-y-12 md:space-y-24">
         <motion.h2
-          className="text-5xl md:text-6xl font-display text-charcoal max-w-2xl micro-link"
+          className="micro-link max-w-2xl font-display text-4xl text-charcoal sm:text-5xl md:text-6xl"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -16,8 +16,32 @@ export function FeaturedWorks() {
           Artisan Masterworks
         </motion.h2>
 
-        {/* Asymmetrical broken grid layout */}
-        <div className="relative h-[800px] overflow-hidden">
+        {/* Mobile-first stacked layout */}
+        <div className="grid grid-cols-1 gap-6 md:hidden">
+          {["/photo/master1.png", "/photo/master2.jpeg", "/photo/master3.jpeg"].map((src, index) => (
+            <motion.div
+              key={src}
+              className="card micro-card overflow-hidden rounded-2xl shadow-lg"
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              whileHover={hoverLift}
+              whileTap={tapPress}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
+              data-cursor="interactive"
+            >
+              <div className="micro-card-inner w-full">
+                <img
+                  src={src}
+                  alt={`Masterwork ${index + 1}`}
+                  className="h-auto w-full object-cover"
+                />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Asymmetrical desktop layout */}
+        <div className="relative hidden h-[800px] overflow-hidden md:block">
           {/* Card 1: Large, top-left */}
           <motion.div
             className="absolute top-0 left-0 w-[48%] h-[350px] card micro-card rounded-2xl overflow-hidden shadow-lg"
@@ -32,7 +56,7 @@ export function FeaturedWorks() {
               <img
                 src="/photo/master1.png"
                 alt="Masterwork 1"
-                className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                className="h-full w-full object-cover transition duration-500 hover:scale-105"
               />
             </div>
           </motion.div>
@@ -51,7 +75,7 @@ export function FeaturedWorks() {
               <img
                 src="/photo/master2.jpeg"
                 alt="Masterwork 2"
-                className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                className="h-full w-full object-cover transition duration-500 hover:scale-105"
               />
             </div>
           </motion.div>
@@ -70,7 +94,7 @@ export function FeaturedWorks() {
               <img
                 src="/photo/master3.jpeg"
                 alt="Masterwork 3"
-                className="w-full h-full object-cover transition duration-500 hover:scale-105"
+                className="h-full w-full object-cover transition duration-500 hover:scale-105"
               />
             </div>
           </motion.div>

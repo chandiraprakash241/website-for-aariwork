@@ -48,7 +48,7 @@ export function AtelierLanding() {
         <div className="absolute bottom-[-24%] right-[-8%] h-[30rem] w-[30rem] rounded-full bg-signal/15 blur-[96px]" />
       </div>
 
-      <section className="mx-auto grid min-h-screen max-w-7xl items-center gap-10 px-6 pb-20 pt-28 md:grid-cols-[1.1fr_1fr] md:px-12">
+      <section className="mx-auto grid min-h-screen max-w-7xl items-center gap-8 px-4 pb-16 pt-24 sm:px-6 md:grid-cols-[1.1fr_1fr] md:gap-10 md:px-10 md:pb-20 md:pt-28">
         <div ref={panelRef} className="space-y-7">
           <motion.p
             className="atelier-card inline-flex rounded-full border border-ink/20 bg-pearl/80 px-4 py-2 text-xs uppercase tracking-[0.24em]"
@@ -59,7 +59,7 @@ export function AtelierLanding() {
             The Heirloom Atelier
           </motion.p>
 
-          <h1 className="atelier-card font-display text-5xl leading-[0.95] md:text-7xl">
+          <h1 className="atelier-card font-display text-4xl leading-[0.98] sm:text-5xl md:text-7xl">
             Couture Aari blouses, hand-embroidered for your moment.
           </h1>
 
@@ -78,7 +78,7 @@ export function AtelierLanding() {
             </button>
           </div>
 
-          <motion.div {...fadeUp} className="atelier-card grid grid-cols-3 gap-3 pt-6">
+          <motion.div {...fadeUp} className="atelier-card grid grid-cols-1 gap-3 pt-6 sm:grid-cols-3">
             {[
               "45-120 hours handwork",
               "Personal fitting guidance",
@@ -96,7 +96,7 @@ export function AtelierLanding() {
 
         <motion.div
           {...fadeUp}
-          className="relative h-[420px] overflow-hidden rounded-[2rem] border border-ink/15 bg-pearl/70 p-6 shadow-aura backdrop-blur-sm md:h-[560px]"
+          className="relative h-auto overflow-hidden rounded-[2rem] border border-ink/15 bg-pearl/70 p-5 shadow-aura backdrop-blur-sm md:h-[560px] md:p-6"
         >
           <h3 className="font-display text-2xl text-ink md:text-3xl">Craftsmanship Board</h3>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-clove/90 md:text-base">
@@ -126,7 +126,7 @@ export function AtelierLanding() {
         </motion.div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-16 md:px-12">
+      <section className="mx-auto max-w-7xl px-4 pb-14 sm:px-6 md:px-10 md:pb-16">
         <motion.div
           {...fadeUp}
           className="rounded-[2.2rem] border border-ink/15 bg-pearl/70 p-6 shadow-aura backdrop-blur-md md:p-10"
@@ -142,7 +142,7 @@ export function AtelierLanding() {
         </motion.div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12">
+      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6 md:px-10">
         <motion.div
           {...fadeUp}
           className="grid gap-4 rounded-[2rem] border border-ink/15 bg-pearl/65 p-6 shadow-aura md:grid-cols-3 md:p-8"

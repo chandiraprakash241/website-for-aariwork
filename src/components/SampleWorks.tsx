@@ -41,7 +41,7 @@ const sampleWorks: Work[] = [
 
 export function SampleWorks() {
   return (
-    <section className="relative w-full py-[clamp(120px,12vw,160px)] px-[clamp(16px,6vw,12%)] bg-cream">
+    <section className="relative w-full bg-cream px-4 py-20 sm:px-6 md:px-[8%] md:py-32">
       <div className="relative z-10 space-y-[clamp(80px,10vw,120px)] max-w-7xl mx-auto">
         <motion.div
           className="space-y-3"

@@ -602,22 +602,22 @@ export function ThreadCanvas() {
   };
 
   return (
-    <section className="relative z-30 -mt-[220px] w-full px-[12%] pb-[160px] pt-[280px] thread-canvas-gradient">
+    <section className="thread-canvas-gradient relative z-30 -mt-24 w-full px-4 pb-20 pt-28 sm:px-6 md:-mt-[220px] md:px-[8%] md:pb-32 md:pt-[280px]">
       <motion.div
         className="space-y-8"
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       >
-        <div className="space-y-4 max-w-3xl">
-          <h2 className="text-5xl md:text-6xl font-display text-charcoal">Your Thread</h2>
-          <p className="text-lg text-charcoal/70">
+        <div className="max-w-3xl space-y-4">
+          <h2 className="font-display text-4xl text-charcoal sm:text-5xl md:text-6xl">Your Thread</h2>
+          <p className="text-base text-charcoal/70 md:text-lg">
             Preview blouse embroidery in real time. Guided stitches follow neckline and sleeve flow.
           </p>
         </div>
 
         <div
-          className="relative w-full h-[600px] rounded-[24px] overflow-hidden border border-cream/35 canvas-shadow"
+          className="canvas-shadow relative h-[420px] w-full overflow-hidden rounded-2xl border border-cream/35 md:h-[600px] md:rounded-[24px]"
           data-cursor="thread"
         >
           <canvas
@@ -633,17 +633,17 @@ export function ThreadCanvas() {
               animate={{ opacity: 0.36 }}
               transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
             >
-              <p className="text-cream/40 text-lg font-light text-center">
+              <p className="text-center text-base font-light text-cream/40 md:text-lg">
                 Draw to preview your blouse embroidery
               </p>
             </motion.div>
           )}
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
           <motion.button
             onClick={handleClear}
-            className="btn-secondary"
+            className="btn-secondary w-full sm:w-auto"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             data-cursor="interactive"
@@ -651,13 +651,13 @@ export function ThreadCanvas() {
             Clear Canvas
           </motion.button>
 
-          <p className="text-sm text-charcoal/50 flex items-center">
+          <p className="flex items-center text-sm text-charcoal/50">
             {strokeCount} stroke{strokeCount !== 1 ? "s" : ""} created
           </p>
         </div>
 
         <motion.div
-          className="rounded-xl border border-brass/20 bg-brass/5 px-6 py-4"
+          className="rounded-xl border border-brass/20 bg-brass/5 px-4 py-3 md:px-6 md:py-4"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}

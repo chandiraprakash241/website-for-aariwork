@@ -70,9 +70,9 @@ export function SignatureField() {
   const backActive = zones.includes("Back Motif");
 
   return (
-    <div className="grid gap-8 lg:grid-cols-[1.05fr_1fr]">
+    <div className="grid gap-6 lg:grid-cols-[1.05fr_1fr] lg:gap-8">
       <div className="space-y-5 rounded-3xl border border-ink/15 bg-canvas/80 p-5 md:p-6">
-        <h3 className="font-display text-2xl text-ink">Blouse Personalization</h3>
+        <h3 className="font-display text-xl text-ink sm:text-2xl">Blouse Personalization</h3>
 
         <div className="grid gap-4 md:grid-cols-2">
           <label className="space-y-2">
@@ -172,14 +172,14 @@ export function SignatureField() {
       </div>
 
       <div className="rounded-3xl border border-ink/15 bg-pearl/75 p-5 md:p-6">
-        <h3 className="font-display text-2xl text-ink">Live Blouse Preview</h3>
+        <h3 className="font-display text-xl text-ink sm:text-2xl">Live Blouse Preview</h3>
         <p className="mt-2 text-sm leading-relaxed text-clove/85">
           Every selection updates the garment instantly so you can visualize your final
           embroidery before booking your fitting.
         </p>
 
-        <div className="mt-5 overflow-hidden rounded-3xl border border-ink/12 signature-field-gradient p-4">
-          <svg viewBox="0 0 500 420" className="h-[290px] w-full md:h-[330px]" fill="none">
+        <div className="mt-5 overflow-hidden rounded-3xl border border-ink/12 signature-field-gradient p-3 sm:p-4">
+          <svg viewBox="0 0 500 420" className="h-auto w-full" fill="none">
             <rect x="120" y="120" width="260" height="210" rx="46" fill={garmentFill} />
             <rect x="66" y="130" width="84" height={sleeveWidth[sleeve]} rx="22" fill={garmentFill} />
             <rect x="350" y="130" width="84" height={sleeveWidth[sleeve]} rx="22" fill={garmentFill} />

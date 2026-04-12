@@ -42,11 +42,11 @@ export function StorySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full py-[160px] px-[12%] bg-cream">
+    <section ref={sectionRef} className="relative w-full bg-cream px-4 py-20 sm:px-6 md:px-[8%] md:py-32">
       {/* Fabric texture overlay */}
       <div ref={textureRef} className="absolute inset-0 pointer-events-none fabric-texture opacity-30" />
 
-      <div className="relative z-10 space-y-[120px]">
+      <div className="relative z-10 mx-auto max-w-7xl space-y-12 md:space-y-24">
         {/* Section intro */}
         <motion.div
           className="max-w-3xl space-y-6"
@@ -55,17 +55,17 @@ export function StorySection() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="text-5xl md:text-6xl font-display text-charcoal">
+          <h2 className="font-display text-4xl text-charcoal sm:text-5xl md:text-6xl">
             Craft as Culture
           </h2>
-          <p className="text-lg leading-relaxed text-charcoal/80 max-w-2xl">
+          <p className="max-w-2xl text-base leading-relaxed text-charcoal/80 md:text-lg">
             Aari embroidery is storytelling with thread. For centuries, artisans have transformed
             silk into heritage, one stitch at a time.
           </p>
         </motion.div>
 
         {/* Three-column asymmetrical story grid */}
-        <div className="grid gap-8 md:grid-cols-3 auto-rows-max break-grid">
+        <div className="break-grid grid auto-rows-max gap-5 md:grid-cols-3 md:gap-8">
           {stories.map((story, index) => (
             <motion.article
               key={story.title}
@@ -93,7 +93,7 @@ export function StorySection() {
 
         {/* Textile detail callout */}
         <motion.div
-          className="mt-[120px] p-8 rounded-4xl border border-taupe/50 bg-gold/10 backdrop-blur-sm"
+          className="mt-8 rounded-3xl border border-taupe/50 bg-gold/10 p-5 backdrop-blur-sm sm:p-6 md:mt-16 md:rounded-4xl md:p-8"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}

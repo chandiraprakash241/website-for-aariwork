@@ -35,7 +35,7 @@ const testimonials: Testimonial[] = [
 
 export function Testimonials() {
   return (
-    <section className="relative w-full py-[clamp(120px,12vw,160px)] px-[clamp(16px,6vw,12%)] bg-charcoal">
+    <section className="relative w-full bg-charcoal px-4 py-20 sm:px-6 md:px-[8%] md:py-32">
       <div className="relative z-10 space-y-[clamp(80px,10vw,120px)] max-w-7xl mx-auto">
         <motion.div
           className="space-y-3"
@@ -44,7 +44,7 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-[clamp(32px,7vw,64px)] font-display text-cream font-semibold">
+          <h2 className="font-display text-4xl font-semibold text-cream sm:text-5xl md:text-6xl">
             Words from Brides
           </h2>
           <p className="text-[clamp(16px,4vw,18px)] text-cream/70 max-w-2xl">

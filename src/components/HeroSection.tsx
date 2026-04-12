@@ -33,7 +33,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden pb-[clamp(140px,16vw,200px)] pt-[clamp(100px,12vw,160px)] px-[clamp(16px,6vw,12%)]">
+    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden px-4 pb-28 pt-24 sm:px-6 md:px-[8%] md:pb-[clamp(140px,16vw,200px)] md:pt-[clamp(100px,12vw,160px)]">
       {/* Floating thread particles SVG background */}
       <svg
         className="pointer-events-none absolute inset-0 w-full h-full opacity-20"
@@ -83,14 +83,14 @@ export function HeroSection() {
 
       {/* Brand identity block: above background, below hero copy */}
       <motion.div
-        className="absolute left-[6%] top-[6%] z-20"
+        className="absolute left-4 top-4 z-20 sm:left-6 sm:top-6 md:left-[6%] md:top-[6%]"
         initial={{ opacity: 0, y: -8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
       >
         <a
           href="#"
-          className="group inline-flex items-center gap-3 sm:gap-4 rounded-full bg-oxblood/25 px-3.5 py-2 sm:px-4.5 sm:py-2.5 md:px-5 md:py-3 backdrop-blur-sm border border-cream/15 transition duration-300 hover:bg-oxblood/35 hover:border-gold/30"
+          className="group inline-flex items-center gap-2 rounded-full border border-cream/15 bg-oxblood/25 px-3 py-1.5 backdrop-blur-sm transition duration-300 hover:bg-oxblood/35 hover:border-gold/30 sm:gap-3 sm:px-4 sm:py-2 md:gap-4 md:px-5 md:py-3"
           data-cursor="interactive"
           aria-label="Sewzy Bee"
         >
@@ -110,7 +110,7 @@ export function HeroSection() {
       </motion.div>
 
       {/* Main content container with responsive asymmetrical layout */}
-      <div className="relative z-30 grid gap-[clamp(24px,6vw,32px)] items-center min-h-[calc(100vh-280px)] md:grid-cols-[1fr_1.1fr] md:min-h-[calc(100vh-320px)]">
+      <div className="relative z-30 grid min-h-[calc(100vh-220px)] items-center gap-8 pt-14 md:min-h-[calc(100vh-320px)] md:grid-cols-[1fr_1.1fr] md:gap-[clamp(24px,6vw,32px)] md:pt-0">
         {/* Left text block */}
         <motion.div
           className="space-y-[clamp(20px,4vw,24px)]"
@@ -119,13 +119,13 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
         >
           {/* Main Headline - controlled two-line break with staggered reveal */}
-          <h1 className="text-[clamp(36px,9vw,92px)] leading-[1.02] sm:leading-[1.08] font-display font-bold text-cream tracking-[-0.02em]">
+          <h1 className="font-display text-[clamp(34px,10vw,92px)] font-bold leading-[1.03] tracking-[-0.02em] text-cream sm:leading-[1.08]">
             {headlineLines.map((line, lineIndex) => {
               const delayOffset =
                 headlineLines.slice(0, lineIndex).join("").length + lineIndex * 2;
 
               return (
-                <span key={line} className="block whitespace-nowrap">
+                <span key={line} className="block break-words sm:whitespace-nowrap">
                   {line.split("").map((letter, letterIndex) => (
                     <motion.span
                       key={`${line}-${letter}-${letterIndex}`}
@@ -145,7 +145,7 @@ export function HeroSection() {
 
           {/* Subtitle */}
           <motion.p
-            className="text-[clamp(14px,3.5vw,18px)] leading-relaxed text-cream/95 max-w-xl"
+            className="max-w-xl text-sm leading-relaxed text-cream/95 sm:text-base md:text-[clamp(14px,3.5vw,18px)]"
             variants={fadeInUp}
             initial="hidden"
             animate="visible"
@@ -288,7 +288,7 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 md:bottom-8"
         animate={scrollPulse.animate}
         transition={scrollPulse.transition}
       >

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Sora, Playfair_Display } from "next/font/google";
 import type { ReactNode } from "react";
 import { GlobalCursor } from "@/components/GlobalCursor";
@@ -20,6 +20,12 @@ export const metadata: Metadata = {
   title: "Aariwork | Threads of Heritage",
   description:
     "An experimental, award-worthy Aari embroidery experience. Custom couture blouses handcrafted by master artisans."
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover"
 };
 
 export default function RootLayout({

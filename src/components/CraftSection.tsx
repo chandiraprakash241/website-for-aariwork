@@ -19,16 +19,16 @@ export function CraftSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-rust-section relative w-full py-[160px] px-[12%]">
+    <section ref={sectionRef} className="bg-rust-section relative w-full px-4 py-20 sm:px-6 md:px-[8%] md:py-32">
       <img
        ref={ornamentRef}
         src="/photo/logo.webp"
        alt="Brand Logo"
-       className="pointer-events-none absolute right-[6%] top-[12%] z-0 w-[120px] opacity-90"
+       className="pointer-events-none absolute right-4 top-8 z-0 w-16 opacity-90 sm:w-20 md:right-[6%] md:top-[12%] md:w-28"
        />
-      <div className="relative z-10 space-y-[80px]">
+      <div className="relative z-10 mx-auto max-w-7xl space-y-10 md:space-y-20">
         <motion.h2
-          className="text-5xl md:text-6xl font-display text-cream max-w-3xl"
+          className="max-w-3xl font-display text-4xl text-cream sm:text-5xl md:text-6xl"
           initial={{ opacity: 0, y: 28 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -37,7 +37,7 @@ export function CraftSection() {
         </motion.h2>
 
         {/* Asymmetric two-column layout: 1fr and 0.85fr */}
-        <div className="grid gap-12 md:[grid-template-columns:1fr_0.85fr]">
+        <div className="grid gap-10 md:[grid-template-columns:1fr_0.85fr] md:gap-12">
           {/* Left column: Artisan legacy (wider) */}
           <motion.div
             className="space-y-6"
@@ -45,9 +45,9 @@ export function CraftSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h3 className="text-3xl font-display text-gold">Artisan Legacy</h3>
+            <h3 className="font-display text-2xl text-gold md:text-3xl">Artisan Legacy</h3>
             <div className="space-y-4">
-              <p className="text-lg leading-relaxed text-cream/95">
+              <p className="text-base leading-relaxed text-cream/95 md:text-lg">
                 Our collective of master embroiderers brings 200+ years of combined cultural
                 knowledge to every piece.
               </p>
@@ -70,7 +70,7 @@ export function CraftSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.15, duration: 0.8 }}
           >
-            <h3 className="text-3xl font-display text-gold">Core Techniques</h3>
+            <h3 className="font-display text-2xl text-gold md:text-3xl">Core Techniques</h3>
             <ul className="space-y-3">
               {[
                 "Zari couching with pure gold thread",
