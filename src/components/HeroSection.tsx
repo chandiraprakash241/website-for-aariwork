@@ -33,7 +33,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden px-4 pb-28 pt-20 sm:px-6 md:px-12 md:pb-[clamp(140px,16vw,200px)] md:pt-[clamp(100px,12vw,160px)]">
+    <section className="bg-hero relative z-10 min-h-screen w-full overflow-hidden px-4 py-10 sm:px-6 md:px-12 md:py-20">
       {/* Floating thread particles SVG background */}
       <svg
         className="pointer-events-none absolute inset-0 w-full h-full opacity-20"
@@ -81,43 +81,43 @@ export function HeroSection() {
         />
       </svg>
 
-      {/* Brand identity block: above background, below hero copy */}
-      <motion.div
-        className="relative z-20 mb-8 w-fit md:absolute md:left-[6%] md:top-[6%] md:mb-0"
-        initial={{ opacity: 0, y: -8 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
-      >
-        <a
-          href="#"
-          className="group inline-flex items-center gap-2 rounded-full border border-cream/15 bg-oxblood/25 px-3 py-1.5 backdrop-blur-sm transition duration-300 hover:bg-oxblood/35 hover:border-gold/30 sm:gap-3 sm:px-4 sm:py-2 md:gap-4 md:px-5 md:py-3"
-          data-cursor="interactive"
-          aria-label="Sewzy Bee"
-        >
-          <img
-            src="/photo/logo.webp"
-            alt="Sewzy Bee logo"
-            className="h-auto w-[80%] max-w-xs object-contain logo-glow sm:w-14 md:w-[80%] md:max-w-md"
-            onError={(event) => {
-              event.currentTarget.onerror = null;
-              event.currentTarget.src = "/photo/logo.png";
-            }}
-          />
-          <span className="font-display text-2xl font-semibold leading-tight tracking-[0.045em] text-cream/90 transition duration-300 group-hover:text-gold sm:text-3xl md:text-[clamp(20px,2.8vw,34px)]">
-            Sewzy Bee
-          </span>
-        </a>
-      </motion.div>
-
       {/* Main content container with responsive asymmetrical layout */}
-      <div className="relative z-30 flex min-h-[calc(100vh-220px)] flex-col gap-10 md:min-h-[calc(100vh-320px)] md:flex-row md:items-center md:gap-[clamp(24px,6vw,32px)]">
+      <div className="relative z-30 mx-auto flex min-h-[calc(100vh-160px)] max-w-7xl flex-col gap-10 pt-16 md:min-h-[calc(100vh-220px)] md:flex-row md:items-center md:gap-12 md:pt-0">
         {/* Left text block */}
         <motion.div
-          className="space-y-6 md:w-1/2 md:space-y-[clamp(20px,4vw,24px)]"
+          className="relative z-10 space-y-6 md:w-1/2 md:space-y-[clamp(20px,4vw,24px)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
+          {/* Brand identity block */}
+          <motion.div
+            className="relative z-10 mb-6 w-fit"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+          >
+            <a
+              href="#"
+              className="group inline-flex items-center gap-2 rounded-full border border-cream/15 bg-oxblood/25 px-3 py-1.5 backdrop-blur-sm transition duration-300 hover:bg-oxblood/35 hover:border-gold/30 sm:gap-3 sm:px-4 sm:py-2 md:gap-4 md:px-5 md:py-3"
+              data-cursor="interactive"
+              aria-label="Sewzy Bee"
+            >
+              <img
+                src="/photo/logo.webp"
+                alt="Sewzy Bee logo"
+                className="h-auto w-[80%] max-w-xs object-contain logo-glow sm:w-14 md:w-[80%] md:max-w-md"
+                onError={(event) => {
+                  event.currentTarget.onerror = null;
+                  event.currentTarget.src = "/photo/logo.png";
+                }}
+              />
+              <span className="font-display text-2xl font-semibold leading-tight tracking-[0.045em] text-cream/90 transition duration-300 group-hover:text-gold sm:text-3xl md:text-[clamp(20px,2.8vw,34px)]">
+                Sewzy Bee
+              </span>
+            </a>
+          </motion.div>
+
           {/* Main Headline - controlled two-line break with staggered reveal */}
           <h1 className="font-display text-3xl font-bold leading-tight tracking-[-0.02em] text-cream sm:text-4xl md:text-6xl md:leading-[1.08]">
             {headlineLines.map((line, lineIndex) => {
@@ -187,19 +187,19 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
 
-        {/* Right visual - hidden on mobile, floated with offset on desktop */}
+        {/* Right visual - stacked on mobile, split column on desktop */}
         <motion.div
           ref={visualRef}
-          className="relative hidden md:block md:-translate-y-[40px] md:w-1/2 offset-right"
+          className="relative z-10 w-full md:w-1/2 md:-translate-y-[40px] offset-right"
           variants={fadeInScale}
           initial="hidden"
           animate="visible"
           transition={{ delay: 0.4 }}
         >
-          <div className="relative h-[400px] overflow-hidden rounded-[24px] border border-cream/20 bg-gradient-to-br from-rust/20 to-gold/10 md:h-[520px]">
+          <div className="relative h-[320px] overflow-hidden rounded-[24px] border border-cream/20 bg-gradient-to-br from-rust/20 to-gold/10 sm:h-[380px] md:h-[520px]">
             {/* Embroidery pattern simulation */}
             <svg
-              className="absolute inset-0 w-full h-full"
+              className="absolute inset-0 h-full w-full"
               viewBox="0 0 400 520"
               preserveAspectRatio="xMidYMid slice"
             >
@@ -274,13 +274,13 @@ export function HeroSection() {
 
             {/* Floating label */}
             <motion.div
-              className="absolute bottom-6 left-6 rounded-xl border border-cream/30 bg-oxblood/40 backdrop-blur px-4 py-2"
+              className="absolute bottom-4 left-4 rounded-xl border border-cream/30 bg-oxblood/40 px-3 py-2 backdrop-blur sm:bottom-6 sm:left-6 sm:px-4"
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 2.2, duration: 0.6 }}
             >
-              <p className="text-sm font-semibold text-gold tracking-wide">Macro Aari stitch</p>
-              <p className="text-xs text-cream/75">Hand-rendered embroidery art</p>
+              <p className="text-xs font-semibold tracking-wide text-gold sm:text-sm">Macro Aari stitch</p>
+              <p className="text-[11px] text-cream/75 sm:text-xs">Hand-rendered embroidery art</p>
             </motion.div>
           </div>
         </motion.div>
@@ -288,7 +288,7 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <motion.div
-        className="absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-2 md:bottom-8"
+        className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 flex-col items-center gap-2 md:bottom-8"
         animate={scrollPulse.animate}
         transition={scrollPulse.transition}
       >
