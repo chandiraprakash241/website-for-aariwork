@@ -190,7 +190,7 @@ export function HeroSection() {
         {/* Right visual - stacked on mobile, split column on desktop */}
         <motion.div
           ref={visualRef}
-          className="relative z-10 w-full md:w-1/2 md:-translate-y-[40px] offset-right"
+          className="relative z-10 w-full md:w-1/2 offset-right"
           variants={fadeInScale}
           initial="hidden"
           animate="visible"

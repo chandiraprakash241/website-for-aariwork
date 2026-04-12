@@ -602,7 +602,7 @@ export function ThreadCanvas() {
   };
 
   return (
-    <section className="thread-canvas-gradient relative z-30 -mt-24 w-full px-4 pb-20 pt-28 sm:px-6 md:-mt-[220px] md:px-[8%] md:pb-32 md:pt-[280px]">
+    <section className="thread-canvas-gradient relative z-10 mt-16 w-full overflow-hidden px-4 py-16 sm:px-6 md:mt-24 md:px-[8%] md:py-24">
       <motion.div
         className="space-y-8"
         initial={{ opacity: 0 }}
