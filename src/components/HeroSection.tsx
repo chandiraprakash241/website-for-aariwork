@@ -164,8 +164,10 @@ export function HeroSection() {
             transition={{ delay: 1 }}
           >
             <motion.a
-              href="mailto:hello@aariwork.com?subject=Start%20My%20Blouse%20Design"
-              className="btn-primary w-full sm:w-auto"
+              href="https://wa.me/916369713427"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary w-full sm:w-auto flex items-center justify-center text-center"
               variants={buttonHover}
               whileHover="hover"
               whileTap="tap"
@@ -175,8 +177,8 @@ export function HeroSection() {
             </motion.a>
 
             <motion.a
-              href="#portfolio"
-              className="btn-secondary w-full sm:w-auto"
+              href="#artisan-masterwork"
+              className="btn-secondary w-full sm:w-auto flex items-center justify-center text-center"
               variants={buttonSecondaryHover}
               whileHover="hover"
               whileTap="tap"

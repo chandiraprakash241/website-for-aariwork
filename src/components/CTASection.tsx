@@ -23,22 +23,36 @@ export function CTASection() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-6">
-          <motion.button className="btn-primary w-full sm:w-auto" whileTap={tapPress} data-cursor="interactive">
+          <motion.a
+            href="https://wa.me/916369713427?text=What%20is%20the%20status%20of%20my%20order%3F"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary w-full sm:w-auto flex items-center justify-center text-center"
+            whileTap={tapPress}
+            data-cursor="interactive"
+          >
             Inquire About Your Blouse
-          </motion.button>
-          <motion.button className="btn-secondary w-full sm:w-auto" whileTap={tapPress} data-cursor="interactive">
+          </motion.a>
+          <motion.a
+            href="https://wa.me/916369713427?text=Hi%2C%20I'm%20an%20Aari%20Work%20designer.%20I%20would%20like%20to%20work%20with%20you."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-secondary w-full sm:w-auto flex items-center justify-center text-center"
+            whileTap={tapPress}
+            data-cursor="interactive"
+          >
             View Collaboration Process
-          </motion.button>
+          </motion.a>
         </div>
 
         <div className="pt-8 border-t border-taupe/30">
           <p className="text-sm text-charcoal/60 uppercase tracking-wider">Contact us directly</p>
           <a
-            href="mailto:hello@aariwork.com"
+            href="mailto:muthusowmiya001@gmail.com"
             className="text-lg font-semibold text-brass hover:text-rust transition-colors duration-300 micro-link"
             data-cursor="interactive"
           >
-            hello@aariwork.com
+            muthusowmiya001@gmail.com
           </a>
         </div>
       </motion.div>

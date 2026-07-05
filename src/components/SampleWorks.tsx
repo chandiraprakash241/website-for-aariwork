@@ -126,7 +126,7 @@ export function SampleWorks() {
 
                 {/* CTA */}
                 <a
-                  href="mailto:hello@aariwork.com?subject=Inquiry%20about%20design"
+                  href="mailto:muthusowmiya001@gmail.com?subject=Inquiry%20about%20design"
                   className="inline-block mt-3 text-[clamp(12px,2vw,14px)] text-brass hover:text-rust transition-colors duration-300 micro-link font-semibold"
                 >
                   Inquire now →

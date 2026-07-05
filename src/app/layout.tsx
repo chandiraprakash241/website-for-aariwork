@@ -19,7 +19,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Aariwork | Threads of Heritage",
   description:
-    "An experimental, award-worthy Aari embroidery experience. Custom couture blouses handcrafted by master artisans."
+    "An experimental, award-worthy Aari embroidery experience. Custom couture blouses handcrafted by master artisans.",
+  icons: {
+    icon: "/favicon.png",
+  }
 };
 
 export const viewport: Viewport = {

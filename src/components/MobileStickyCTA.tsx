@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const WHATSAPP_NUMBER = "919876543210";
+const WHATSAPP_NUMBER = "916369713427";
 const WHATSAPP_MESSAGE = "Hi, I'm interested in Aari blouse design. Can you share details?";
 
 export function MobileStickyCTA() {
@@ -34,7 +34,7 @@ export function MobileStickyCTA() {
   if (isDesktop || !isVisible) return null;
 
   const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
-  const mailtoUrl = "mailto:hello@aariwork.com";
+  const mailtoUrl = "mailto:muthusowmiya001@gmail.com";
 
   return (
     <motion.div
